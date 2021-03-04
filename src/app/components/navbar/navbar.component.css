@@ -1,0 +1,78 @@
+/* Start navbar section */
+
+nav{
+	transition:  .6s ease-in-out;
+}
+
+.navbar-light .navbar-brand{
+    font-size: 2.8rem;
+    font-family: 'Kaushan Script', cursive !important;
+    color: var(--main-color);
+	font-weight : 600;
+	padding-top : 0
+
+}
+
+.navbar-light .navbar-brand:hover{
+    color: var(--main-color);
+}
+
+.navbar-light .navbar-brand span{
+    color: #08526d;
+	font-weight : 300;
+    font-family: 'Kaushan Script', cursive !important;
+}
+
+.navbar-bgcolor{
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.125);
+
+}
+
+.navbar-bgcolor .nav-link:not(.btn){
+	color : #08526d !important;
+}
+
+.navbar-light .navbar-nav .nav-link{
+	margin-left : 15px;
+	color :var(--second-color);
+	text-transform : uppercase;
+	font-weight : 600
+} 
+
+.navbar-light .navbar-nav .nav-link.active{
+    color: var(--main-color) !important;
+}
+
+.navbar-light .navbar-nav .nav-link.notify{
+    position: relative;
+}
+
+.navbar-light .navbar-nav .nav-link.notify i{
+	position: relative;
+    font-size: 24px
+}
+
+.navbar-light .navbar-nav .nav-link.notify span{
+    position: absolute;
+        top: -7px;
+    right: -13px;
+    z-index: 2;
+	display: block;
+	background-color: #dc3545;
+	color: #fff;
+    width: 20px;
+	height: 20px;
+	line-height: 20px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+@media(max-width : 992){
+	.hidden-block {
+		display: none;
+	}
+}
+
+/* End navbar section */

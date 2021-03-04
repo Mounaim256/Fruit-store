@@ -1,0 +1,83 @@
+/* Start Footer Section */
+.footer{
+	padding: 70px 0;
+	background-color: #fff
+}
+
+.footer .footer-box-one,
+.footer .footer-box-two,
+.footer .footer-box-three{
+	margin-bottom:15px
+}
+
+.footer .footer-box-one h3{
+    font-size: 2.8rem;
+    font-family: 'Kaushan Script', cursive;
+    color: var(--main-color);
+	font-weight : 600;
+	padding-top : 0;
+	margin-bottom: 20px
+}
+
+.footer .footer-box-one h3 span{
+    color: #08526d;
+	font-weight : 300;
+	font-family: 'Kaushan Script', cursive !important
+}
+
+.footer .footer-box-one p{
+    text-align: justify;
+	margin: 0
+}
+
+.footer .footer-box-one a{
+    color: #08526d;
+	text-decoration: none
+}
+	
+.footer .footer-box-one a:before{
+    content: "\f138";
+	font-family: "Font Awesome 5 Free";
+    margin-right: 5px;
+    font-weight: 900;
+}
+
+.footer .footer-box-two h4,
+.footer .footer-box-three h4{
+	margin-bottom:44px;
+	color: #08526d;
+	letter-spacing:-1px
+}
+
+.footer .footer-box-two ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 44px
+}
+
+.footer .footer-box-two ul li{
+	width: 50%
+}
+
+.footer .footer-box-two ul li a{
+	color: #08526d !important;
+	text-decoration: none
+}
+
+.footer .footer-box-two ul li a:before{
+	content: "\f105";
+	font-family: "Font Awesome 5 Free";
+    margin-right: 5px;
+    font-weight: 900;
+}
+
+.footer .footer-box-three ul li{
+	margin-bottom: 23px
+}
+
+.footer .footer-box-three ul li a{
+	color: #08526d !important;
+	text-decoration: none
+}
+
+/* End Footer Section */

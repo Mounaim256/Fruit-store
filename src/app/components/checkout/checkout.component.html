@@ -1,0 +1,48 @@
+<!-- Start Checkout section-->
+<div class="checkout">
+    <!-- Start checkout step section-->
+    <div class="checkout-step">
+        <div class="checkout-step-nb" *ngFor="let step of checkoutStep;let i=index;">
+            <span [ngClass]="{'valid':step.isValid}">{{i+1}}</span>
+            <p>{{step.name}}</p>
+        </div>
+    </div>    
+    
+    <!-- End checkout step section-->
+    <div class="container">
+        <div class="row">
+            <!-- Start checkout info section-->
+            <div class="col-lg-8">
+                <div class="checkout-info">
+                    <app-person-iinfo (personInfo)="validInfo($event)" [ngClass]="{'hidden': step !== 1}"></app-person-iinfo>
+                    <app-payment (paymentMethod)="validInfo($event)" [ngClass]="{'hidden': step !== 2}"></app-payment>
+                    <app-confirmation  (confirma)="validInfo($event)"  [ngClass]="{'hidden': step !== 3}" [cartData]="cartData"></app-confirmation>
+                </div>
+            </div>
+            <!-- End checkout info section-->
+            <!-- Start order info section-->
+            <div class="col-lg-4">
+                <div class="shopping-cart-price">
+                    <h3>Order Summary</h3>
+                    <div class="order-info">
+                        <div class="sous-total">
+                            <p>Sous-total</p>
+                            <span>{{subTotal|currency}}</span>
+                        </div>
+                        <div class="livration">
+                            <p>Livration</p>
+                            <span>{{livration|currency}}</span>
+                        </div>
+                    </div>
+                    <div class="price-total">
+                        <p>Total</p>
+                        <span>{{(livration + subTotal)|currency}}</span>
+                    </div>
+                    <button class="btn btn-danger btn-block mt-2" (click)="orderNow()" [ngClass]="{'hidden':step !== 4}">Order Now </button>
+                </div>
+            </div>
+            <!-- End order info section-->
+        </div>
+    </div>
+</div>
+<!-- End Checkout section-->

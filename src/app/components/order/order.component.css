@@ -1,0 +1,18 @@
+/* Start order section */
+
+.order{
+    margin-top: 88px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f6f6f6
+}
+
+.order h2{
+    text-transform: capitalize;
+    font-family: sans-serif;
+    letter-spacing: -3px;
+    color: var(--second-color);
+    margin-bottom: 3rem;
+}
+
+/* End order section */

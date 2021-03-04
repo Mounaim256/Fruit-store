@@ -1,0 +1,34 @@
+/* Start goods section */
+.goods-card{
+    margin-top: 2rem;
+    border-radius: .25rem;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    overflow: hidden;
+}
+
+.goods-card .goods-card-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fbfbfb;
+    font-family: 'proxima-nova-soft', sans-serif;
+}
+
+.goods-card .goods-card-body .card-body-left h5{
+    color: #333;
+    line-height: 1.34;
+    text-transform: capitalize;
+    margin: 5px 0 0;
+}
+
+.goods-card .goods-card-body .card-body-left p{
+    margin: 0;
+    color: var(--second-color);
+}
+
+.goods-card .goods-card-body a{
+    background-color: var(--second-color);
+    color: #fff;
+}
+/* End goods section */

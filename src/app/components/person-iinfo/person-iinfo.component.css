@@ -1,0 +1,17 @@
+/* Start person info section */
+.person-info button{
+    display: flex;
+    color: #fff;
+    background-color: var(--second-color);
+    align-items: center;
+}
+
+.person-info h3{
+    margin-bottom: 20px;
+}
+
+.person-info p{
+    font-weight: 700;
+}
+
+/* End person info section */

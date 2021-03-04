@@ -1,0 +1,27 @@
+<div class="confirmation">
+    <h3>Review of orders</h3>
+    <table class="table .table-sm text-center">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Img</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let info of cartData; let i=index;">
+            <th scope="row">{{i+1}}</th>
+            <td><img [src]="info.imgUrl" [alt]="info.name"></td>
+            <td>{{info.name}}</td>
+            <td>{{info.quantity}}Kg</td>
+            <td>{{info.price|currency}}</td>
+            <td>{{(info.price * info.quantity)|currency}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    <button class="btn ml-auto btn-sm" type="submit" (click)="confirmation()">Confirmed</button>
+</div>

@@ -1,0 +1,93 @@
+/* Start sign up section */
+
+.sign-in{
+    margin-top: 88px;
+    /*height: calc(100vh - 88px);*/
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(45deg,rgb(62, 63, 69),rgb(126, 131, 109),rgb(174, 170, 130))
+    }
+    
+    .sign-in .signin-desc{
+        color: #fff;
+        background: url("../../../assets/img/signup/bgImg.jpg") no-repeat center center;
+        height: 100%;
+        padding: 20px;
+        margin-right: -15px;
+        position: relative;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        overflow: hidden;
+    }
+    
+    @media(max-width : 767px){
+        .sign-in .signin-desc{
+            margin-right: 0;
+            border-top-right-radius: 6px;
+            border-bottom-left-radius: 0;
+        }
+    }
+    
+    .sign-in .signin-desc::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(37, 46, 53, 0.5)
+    }
+    
+    .sign-in .signin-desc h2{
+        font-family: 'Dancing Script', cursive;
+        text-transform: Uppercase;
+        -webkit-text-shadow: 0 1px 2px rgba(0,0,0,.6);
+        text-shadow: 0 1px 2px rgba(0,0,0,.6);
+        position: relative;
+        z-index: 2;
+    }
+    
+    .sign-in .signin-desc p{
+        position: relative;
+        z-index: 2;
+    }
+    
+    .sign-in form{
+        padding: 20px;
+        background-color: #fff;
+        margin-left: -15px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+    
+    @media(max-width : 767px){
+        .sign-in form{
+            margin-left: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 6px;
+        }
+    }
+	
+	.sign-in form label {
+		font-size: 12px;
+	  }
+    
+    .sign-in form input:focus{
+        -webkit-box-shadow: none;
+           -moz-box-shadow: none;
+             -o-box-shadow: none;
+                box-shadow: none;
+        border : 2px solid var(--second-color);
+    }
+    
+    
+    .sign-in form button{
+        background-color: var(--second-color);
+        color: #fff
+    }
+    
+    .sign-in form p{
+        margin: 16px 0 0;
+    }
+    
+    /* End sign up section */

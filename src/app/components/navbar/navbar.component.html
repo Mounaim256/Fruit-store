@@ -1,0 +1,50 @@
+<!-- Start navbar section -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" [ngClass]="{'navbar-bgcolor':fixedNow}" #nav>
+    <div class="container">
+
+        <!-- Start navbar brand-->
+        <a class="navbar-brand" routerLink="">Golden<span>Food</span></a>
+        <!-- End navbar brand-->
+
+        <!-- Start navbar toggler-->
+        <button class="navbar-toggler" type="button" (click)="show()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- End navbar toggler-->
+
+        <!-- Start navbar collapse-->
+        <div class="collapse navbar-collapse hidden-block"[ngClass]="{'show': isShow}">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="show()">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link notify" routerLink="cart" routerLinkActive="active" (click)="show()"><i class="fas fa-cart-plus"><span>{{nbOfGoodsInCart|async}}</span></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="signup" routerLinkActive="active" (click)="show()" *ngIf="!isConnected">Signup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="login" routerLinkActive="active" (click)="show()" *ngIf="!isConnected">Login</a>
+                </li>
+                <li class="nav-item dropdown" *ngIf="isConnected">
+                    <a class="nav-link dropdown-toggle" role="button" (click)="openDropDownMenu()">
+                      Dropdown
+                    </a>
+                    <div class="dropdown-menu" [ngClass]="{'show':isOpen}">
+                      <a class="dropdown-item" routerLink="customer" (click)="openDropDownMenu()">My Account</a>
+                      <a class="dropdown-item" routerLink="order" (click)="openDropDownMenu()">My Order</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item btn btn-danger btn-sm" (click)="logout()">Logout</a>
+                    </div>
+                  </li>
+            </ul>
+        </div>
+        <!-- End navbar collapse-->   
+    </div>
+</nav>
+<!-- End navbar section -->
+
+
+<!-- Get the right products to market, faster.
+productboard is the product management system that helps you understand what users need, prioritize what to build, and rally everyone around your roadmap. -->

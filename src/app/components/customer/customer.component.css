@@ -1,0 +1,40 @@
+/* Start customer section */
+
+.customer{
+    margin-top: 88px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f6f6f6
+}
+
+.customer .switch-box{
+    padding: 0 10px;
+}
+
+.customer .switch-box h5{
+    margin-bottom: 25px;
+}
+
+.customer .switch-box ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.customer .switch-box ul li:not(:last-of-type){
+    margin-bottom: 10px;
+}
+
+.customer .switch-box ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+.customer .switch-box ul li a.active{
+    color: var(--second-color);
+}
+
+.customer .switch-box ul li a i{
+    margin-right: 10px;
+}
+
+/* End order section */

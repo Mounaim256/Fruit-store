@@ -1,0 +1,43 @@
+<!-- Start Modal Section -->
+
+<!-- Start overlay Section -->
+<div class="overlay" [ngStyle]="{'display':display}"></div>
+<!-- End overlay Section -->
+
+<div class="modal" role="dialog"  [ngStyle]="{'display':display}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <img [src]="good.imgUrl" alt="apples" class="img-fluid">
+                <span role="button" class="btn-close" (click)="onCloseHandled()">&times;</span>  
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total Price</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">{{good.name}}</th>
+                        <td>${{good.price}}</td>
+                        <td>
+                            <i [ngStyle]= "{'opacity' : opacity}" class="fas fa-chevron-circle-left fa-fw" role="button" (click)= "decreaseQuantity()"></i>
+                            <span>{{quantity}}</span>
+                            <i class="fas fa-chevron-circle-right fa-fw" role="button" (click)= "increaseQuantity()"></i>
+                        </td>
+                        <td>${{totalPrice}}</td>
+                        <td>
+                            <button type="button" class="btn btn-sm" (click)="addProduct()" >Add to Cart</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal Section -->

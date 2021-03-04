@@ -1,0 +1,20 @@
+<!-- Start customer section -->
+<div class="customer">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="switch-box">
+                    <h5>My Account</h5>
+                    <ul>
+                        <li><a routerLink="./account" routerLinkActive="active"><i class="fas fa-user"></i> Account settings</a></li>
+                        <li><a routerLink="./change-password" routerLinkActive="active"><i class="fas fa-keyboard"></i> Change the password</a></li>
+                    </ul>    
+                </div>
+            </div>
+            <div class="col-6">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End customer section -->

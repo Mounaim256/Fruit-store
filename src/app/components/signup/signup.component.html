@@ -1,0 +1,81 @@
+<!-- Start sign up section -->
+<div class="sign-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="signup-desc">
+          <h2>Sign Up</h2>
+          <p>Join Us and share our passion for the road</p>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <form action="" #formVar="ngForm" (ngSubmit)="formSubmit(formVar)">
+           <!-- Start msg error -->
+           <div class="alert alert-danger" *ngIf="errorMsg">{{errorMsg}}</div>
+           <!-- End msg error-->
+          <!-- Start firstname input-->
+          <div class="mb-3">
+            <div class="input-lable">
+              <input type="text" name="firstName" ngModel class="form-control form-control-sm" required #firstnameVar="ngModel">
+              <label>Firstname</label>
+            </div>
+            <div class="invalid-feedback d-block" *ngIf="firstnameVar.errors?.required && firstnameVar.touched">Firstname is required</div>  
+          </div>
+          <!-- End firstname input-->
+          <!-- Start lastname input-->
+          <div class="mb-3">
+            <div class="input-lable">
+              <input type="text" name="lastName" ngModel class="form-control form-control-sm" required #lastnameVar="ngModel">
+              <label>Lastname</label>
+            </div>
+            <div class="invalid-feedback d-block" *ngIf="lastnameVar.errors?.required && lastnameVar.touched">Lastname is required</div>
+          </div>
+          <!-- End lastname input-->
+          <!-- Start email input-->
+          <div class="mb-3">
+            <div class="input-lable">
+              <input type="email" name="email" ngModel class="form-control form-control-sm" required email #emailVar="ngModel">
+              <label>Email</label>
+            </div>
+            <div class="invalid-feedback d-block" *ngIf="emailVar.errors?.required && emailVar.touched">Email is required</div>
+            <div class="invalid-feedback d-block" *ngIf="emailVar.errors?.email && emailVar.touched">this filde is email</div>
+          </div>
+          <!-- End email input-->
+          <!-- Start mobile input-->
+          <div class="mb-3">
+            <div class="input-lable">
+              <input type="text" name="mobile" ngModel class="form-control form-control-sm" required #mobileVar="ngModel">
+              <label>Mobile</label>
+            </div>
+            <div class="invalid-feedback d-block" *ngIf="mobileVar.errors?.required && mobileVar.touched">Mobile is required</div>
+          </div>
+          <!-- End mobile input-->
+          <!-- Start password input-->
+          <div class="mb-3">
+            <div class="input-lable">
+              <input type="password" name="password" ngModel class="form-control form-control-sm" required minlength="6" #passVar="ngModel">
+              <label>Password</label>
+            </div>
+            <div class="invalid-feedback d-block" *ngIf="passVar.errors?.required && passVar.touched">Password is required</div>
+            <div class="invalid-feedback d-block" *ngIf="passVar.errors?.minlength && passVar.touched">Password should be more than 6 characters</div>
+          </div>
+          <!-- End password input-->
+          <!-- Start confirm password input-->
+          <div class="mb-3">
+            <div class="input-lable">
+              <input type="password" name="confirmPassword" ngModel class="form-control form-control-sm" required #ConfirmPassVar="ngModel">
+              <label>Confirm Password</label>
+            </div>
+            <div class="invalid-feedback d-block" *ngIf="passVar.value != ConfirmPassVar.value && ConfirmPassVar.touched">Password is not confirmed</div>
+          </div>
+          <!-- End confirm password input-->
+          <!-- Start submit button-->
+          <button type="submit" class="btn btn-sm btn-lg btn-block" [disabled] = "formVar.invalid || passVar.value != ConfirmPassVar.value">Get Started</button>
+          <!-- End submit button-->
+          <p class="text-center">Already have an account? <a routerLink="/login">Login</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End sign up section -->

@@ -1,0 +1,58 @@
+<!-- Start shopping cart section -->
+<div class="shopping-cart">
+    <div class="container">
+        <h2 class="h1">shopping cart</h2>
+        <div class="row" *ngIf="cartData.length">
+            <div class="col-lg-8">
+                <div class="shopping-cart-good">
+                    <div class="row">
+                        <div class="col-12" *ngFor="let info of cartData; let i=index;">
+                            <div class="shopping-cart-content text-center">
+                                <div class="good-img">
+                                    <img [src]="info.imgUrl" [alt]="info.name">
+                                </div>
+                                <h5>{{info.name}}</h5>
+                                <div class="quantity">
+                                    <button class="btn btn-default" [disabled]="info.quantity === 1" (click)= "decreaseQuantity(i)"><i class="fas fa-chevron-circle-left" role="button" ></i></button>
+                                    <span>{{info.quantity}}Kg</span>
+                                    <button class="btn btn-default" (click)= "increaseQuantity(i)"><i class="fas fa-chevron-circle-right" role="button" ></i></button>
+                                </div>
+                                <p><span>{{info.price * info.quantity}}</span></p>
+                                <div class="cart-operation">
+                                    <span (click) = "updateGoodFromCart(info)" role="button" class="btn btn-sm"><i class="far fa-edit"></i></span>
+                                    <span (click) = "deleteGoodFromCart(info.id)" role="button" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-4">
+                <div class="shopping-cart-price">
+                    <h3>Order Summary</h3>
+                    <div class="order-info">
+                        <div class="sous-total">
+                            <p>Sous-total</p>
+                            <span>{{subTotal|currency}}</span>
+                        </div>
+                        <div class="livration">
+                            <p>Livration</p>
+                            <span>{{livration|currency}}</span>
+                        </div>
+                    </div>
+                    <div class="price-total">
+                        <p>Total</p>
+                        <span>{{(subTotal + livration)|currency}}</span>
+                    </div>
+                    <div class="option">
+                        <a class="btn btn-default btn-sm" routerLink="/">Contine Shopping</a>
+                        <a class="btn btn-danger btn-sm" routerLink="./checkout">checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- End shopping cart section -->

@@ -1,0 +1,12 @@
+<!-- Start goods section -->
+<div class="goods-card">
+    <img [src]="goodParm.imgUrl" class="img-fluid" [alt]="goodParm.name">
+    <div class="goods-card-body">
+        <div class="card-body-left">
+            <h5>{{goodParm.name}}</h5>
+            <p>{{goodParm.price | currency}}</p>    
+        </div>
+        <a routerLink="" class="btn btn-sm" (click) = "addToCart(goodParm)">Add to cart</a>
+    </div>
+</div>
+  <!-- End goods section -->

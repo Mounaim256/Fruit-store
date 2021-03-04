@@ -1,0 +1,11 @@
+<app-slider></app-slider>
+<div class="goods">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3" *ngFor="let good of goodsList">
+                <app-card-goods [goodParm] ="good" (addGood) ="addtoCart($event)"></app-card-goods>
+            </div>
+        </div>
+    </div>
+</div>
+<div #componentModal></div>

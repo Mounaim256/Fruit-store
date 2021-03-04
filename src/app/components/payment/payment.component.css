@@ -1,0 +1,16 @@
+/* Start payment method section */
+.payment-method button{
+    display: flex;
+    color: #fff;
+    background-color: var(--second-color);
+    align-items: center;
+}
+
+.payment-method h3{
+    margin-bottom: 20px;
+}
+
+.hidden{
+    display: none !important;
+}
+/* End payment method section */

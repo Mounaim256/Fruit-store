@@ -1,0 +1,34 @@
+<!-- Start order section -->
+<div class="order">
+    <div class="container">
+        <h2 class="h1">Order List</h2>
+
+        <table class="table .table-sm text-center">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Order Id</th>
+                <th scope="col">Date</th>
+                <th scope="col">Total Price</th>
+                <th scope="col">Payment Method</th>
+                <th scope="col">Status</th>
+                <th scope="col">Purchased Items</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let orderinfo of orderListe">
+                <th scope="row">{{orderinfo.orderId}}</th>
+                <!--<td><img [src]="info.imgUrl" [alt]="info.name"></td>-->
+                <td>{{orderinfo.dataOrder}}</td>
+                <td>{{orderinfo.totalPrice|currency}}</td>
+                <td>{{orderinfo.paymentMethod}}</td>
+                <td>{{orderinfo.stateOfOrder}}</td>
+                <td class="d-flex justify-content-center">
+                    <img *ngFor="let googId of orderinfo.goodsUrlImg" [src]="googId" alt="" width="40px" height="40px" class="mr-2 rounded-circle">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+</div>
+<!-- End order section -->

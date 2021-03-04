@@ -1,0 +1,15 @@
+.confirmation button{
+    display: flex;
+    color: #fff;
+    background-color: var(--second-color);
+    align-items: center;
+}
+
+.confirmation h3{
+    margin-bottom: 20px;
+}
+
+.confirmation img{
+    max-width: 70px;
+    border-radius: 6px;
+}

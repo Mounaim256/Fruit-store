@@ -1,0 +1,53 @@
+<!-- Start account section -->
+<div class="account">
+    <h5>Account settings</h5>
+    <p>This is your private area. Please update your information constantly.</p>
+    <form action="" [formGroup]="formContent">
+        <h6>Personal informations</h6>
+            <div class="mb-2">
+                <div class="input-lable">
+                    <input type="text" class="form-control form-control-sm" formControlName="firstName" required>
+                    <label>Firstname</label>
+                </div>
+                <div class="invalid-feedback d-block" *ngIf="formContent.controls['firstName'].touched && formContent.controls['firstName'].errors?.required">
+                    Valid first name is required.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="input-lable">
+                    <input type="text" class="form-control form-control-sm" required  formControlName="lastName">
+                    <label>Lastname</label>
+                </div>
+                <div class="invalid-feedback d-block" *ngIf="formContent.controls['lastName'].touched && formContent.controls['lastName'].errors?.required">
+                    Valid last name is required.
+                </div>
+            </div>
+            
+            <h6>Contact info</h6>
+            <div class="mb-2">
+                <div class="input-lable">
+                    <input type="email" class="form-control form-control-sm" formControlName="email"  required email>
+                    <label>Email</label>
+                </div>
+                <div class="invalid-feedback d-block" *ngIf="formContent.controls['email'].touched && formContent.controls['email'].errors?.required">
+                    Valid email is required.
+                </div>
+                <div class="invalid-feedback d-block" *ngIf="formContent.controls['email'].touched && formContent.controls['email'].errors?.email">
+                    Please enter a valid email address for shipping updates.
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="input-lable">
+                    <input type="tel" class="form-control form-control-sm" formControlName="mobile" required>
+                    <label>Mobile</label>
+                </div>
+                <div class="invalid-feedback d-block" *ngIf="formContent.controls['mobile'].touched && formContent.controls['mobile'].errors?.required">
+                    Valid mobile is required.
+                </div>
+            </div>
+            
+        <button class="btn ml-auto btn-sm btn-success btn-block" type="submit" [disabled]="formContent.invalid">Saving changes</button>
+    </form>  
+</div>
+<!-- End customer section -->
